@@ -18,9 +18,7 @@ original seja sempre mantida (durante todo o processo de movimentação dos cubo
 # Condicoes
 Escreva um programa que transfira os cubos do tubo 1 para o tubo 3, seguindo as seguintes instruções:
 
-– Utilize as funções empilhar() e desempilhar() da TAD Pilha Dinâmica (https://repl.it/
-
-@elisa_rodrigues/Modulo10-PilhaEncadeada), para transferir um cubo de um tubo para outro;
+– Utilize as funções empilhar() e desempilhar() da TAD Pilha Dinâmica (https://repl.it/@elisa_rodrigues/Modulo10-PilhaEncadeada), para transferir um cubo de um tubo para outro;
 
 – Durante o processo todos os tubos podem ser utilizados para armazenamento auxiliar dos cubos.
 
