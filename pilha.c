@@ -143,6 +143,7 @@ int printar_pilhas(Pilha *p1, Pilha *p2, Pilha *p3) {
   if (p1 == NULL || p2 == NULL || p3 == NULL)
     return 0;
 
+  printf("Pilha 1 - ");
   Elemento *no = *p1;
 
   while (no != NULL) {
@@ -151,6 +152,7 @@ int printar_pilhas(Pilha *p1, Pilha *p2, Pilha *p3) {
   }
   printf("\n");
 
+  printf("Pilha 2 - ");
   no = *p2;
 
   while (no != NULL) {
@@ -159,6 +161,7 @@ int printar_pilhas(Pilha *p1, Pilha *p2, Pilha *p3) {
   }
   printf("\n");
 
+  printf("Pilha 3 - ");
   no = *p3;
 
   while (no != NULL) {
