@@ -138,3 +138,34 @@ int mover(Pilha *p1, Pilha *p2) {
   printf("Pode nao\n");
   return 0;
 }
+
+int printar_pilhas(Pilha *p1, Pilha *p2, Pilha *p3) {
+  if (p1 == NULL || p2 == NULL || p3 == NULL)
+    return 0;
+
+  Elemento *no = *p1;
+
+  while (no != NULL) {
+    printf("%c ", no->dado);
+    no = no->prox;
+  }
+  printf("\n");
+
+  no = *p2;
+
+  while (no != NULL) {
+    printf("%c ", no->dado);
+    no = no->prox;
+  }
+  printf("\n");
+
+  no = *p3;
+
+  while (no != NULL) {
+    printf("%c ", no->dado);
+    no = no->prox;
+  }
+  printf("\n");
+
+  return 1;
+}
