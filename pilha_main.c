@@ -8,7 +8,7 @@ int main() {
   Pilha *p2 = criar_pilha();
   Pilha *p3 = criar_pilha();
   int opcao, a, b;
-  char matrix[5][3];
+  char matrix[5];
 
   empilhar(p1, 'U');
   empilhar(p1, 'O');
@@ -18,7 +18,7 @@ int main() {
 
   do {
     printf("\n*********************************************\n");
-    printar_pilhas(p1, p2, p3, matrix);
+    printar_pilhas(p1, p2, p3);
 
     printf("Opcoes: 0 - Sair do Jogo, 1 - Mudar Elemento\n");
     scanf("%d", &opcao);
@@ -79,7 +79,6 @@ int main() {
       printf("Nao tem essa opcao mano\n");
     }
 
-    printf("*****************************\n");
   } while (1);
 
   liberar_pilha(p1);

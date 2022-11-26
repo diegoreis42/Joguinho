@@ -18,4 +18,4 @@ int consultar_topo_pilha(Pilha *pi, char *dado);
 // função para mover entre as pilhas
 int mover(Pilha *p1, Pilha *p2);
 
-int printar_pilhas(Pilha *p1, Pilha *p2, Pilha *p3, char matrix[5][3]);
+int printar_pilhas(Pilha *p1, Pilha *p2, Pilha *p3);

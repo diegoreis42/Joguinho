@@ -143,38 +143,46 @@ int mover(Pilha *p1, Pilha *p2) {
   return 0;
 }
 
-int printar_pilhas(Pilha *p1, Pilha *p2, Pilha *p3, char matrix[5][3]) {
+int printar_pilhas(Pilha *p1, Pilha *p2, Pilha *p3) {
   if (p1 == NULL || p2 == NULL || p3 == NULL)
     return 0;
 
   Elemento *no1 = *p1;
   Elemento *no2 = *p2;
   Elemento *no3 = *p3;
-  int i = 0;
+  char matrix1[5], matrix2[5], matrix3[5];
 
+  int i = 0;
+  printf("Pilha 1\n");
   while (no1 != NULL) {
-    matrix[i][0] = no1->dado;
-    i++;
+    matrix1[i] = no1->dado;
     no1 = no1->prox;
-  }
-  i = 0;
-  while (no2 != NULL) {
-    matrix[i][1] = no2->dado;
     i++;
-    no2 = no2->prox;
-  }
-  i = 0;
-  while (no3 != NULL) {
-    matrix[i][2] = no3->dado;
-    i++;
-    no3 = no3->prox;
   }
   for (int i = 0; i < 5; i++) {
-    for (int j = 0; j < 3; j++) {
-      printf("|%c| ", matrix[i][j]);
-    }
-    printf("\n");
+    printf("| %c |\n", matrix1[4 - i]);
   }
 
+  i = 0;
+  printf("Pilha 2\n");
+  while (no2 != NULL) {
+    matrix2[i] = no2->dado;
+    no2 = no2->prox;
+    i++;
+  }
+  for (int i = 0; i < 5; i++) {
+    printf("| %c |\n", matrix2[4 - i]);
+  }
+
+  i = 0;
+  printf("Pilha 3\n");
+  while (no3 != NULL) {
+    matrix3[i] = no3->dado;
+    no3 = no3->prox;
+    i++;
+  }
+  for (int i = 0; i < 5; i++) {
+    printf("| %c |\n", matrix3[4 - i]);
+  }
   return 1;
 }
