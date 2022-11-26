@@ -129,6 +129,10 @@ int consultar_topo_pilha(Pilha *pi, char *dado) {
 int mover(Pilha *p1, Pilha *p2) {
   if (p2 == NULL || p1 == NULL)
     return 0;
+  if ((*p1) == NULL) {
+    printf("Tem nada na pilha fi");
+    return 0;
+  }
 
   if ((*p2) == NULL || (*p1)->dado < (*p2)->dado) {
     empilhar(p2, (*p1)->dado);
@@ -139,36 +143,38 @@ int mover(Pilha *p1, Pilha *p2) {
   return 0;
 }
 
-int printar_pilhas(Pilha *p1, Pilha *p2, Pilha *p3) {
+int printar_pilhas(Pilha *p1, Pilha *p2, Pilha *p3, char matrix[5][3]) {
   if (p1 == NULL || p2 == NULL || p3 == NULL)
     return 0;
 
-  printf("Pilha 1 - ");
-  Elemento *no = *p1;
+  Elemento *no1 = *p1;
+  Elemento *no2 = *p2;
+  Elemento *no3 = *p3;
+  int i = 0;
 
-  while (no != NULL) {
-    printf("%c ", no->dado);
-    no = no->prox;
+  while (no1 != NULL) {
+    matrix[i][0] = no1->dado;
+    i++;
+    no1 = no1->prox;
   }
-  printf("\n");
-
-  printf("Pilha 2 - ");
-  no = *p2;
-
-  while (no != NULL) {
-    printf("%c ", no->dado);
-    no = no->prox;
+  i = 0;
+  while (no2 != NULL) {
+    matrix[i][1] = no2->dado;
+    i++;
+    no2 = no2->prox;
   }
-  printf("\n");
-
-  printf("Pilha 3 - ");
-  no = *p3;
-
-  while (no != NULL) {
-    printf("%c ", no->dado);
-    no = no->prox;
+  i = 0;
+  while (no3 != NULL) {
+    matrix[i][2] = no3->dado;
+    i++;
+    no3 = no3->prox;
   }
-  printf("\n");
+  for (int i = 0; i < 5; i++) {
+    for (int j = 0; j < 3; j++) {
+      printf("|%c| ", matrix[i][j]);
+    }
+    printf("\n");
+  }
 
   return 1;
 }
