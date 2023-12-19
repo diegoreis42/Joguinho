@@ -27,5 +27,6 @@ o tubo de origem e o tubo de destino do cubo.
 
 - A cada movimentação de cubo, imprima as três pilhas que representam os tubos.
 
+teste secreto
 
 
